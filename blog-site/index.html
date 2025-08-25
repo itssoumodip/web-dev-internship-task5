@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A comprehensive blog site with dynamic features">
+    <title>BlogWave - Your Blogging Platform</title>
+    <!-- Preload critical assets -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="app.js" as="script">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+          integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="main-header" id="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Blog<span>Wave</span></h1>
+            </div>
+            <nav class="main-nav">
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-list" id="nav-list">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#featured">Featured</a></li>
+                    <li><a href="#recent-posts">Recent Posts</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search..." aria-label="Search blog">
+                    <button class="search-btn" id="search-btn" aria-label="Submit search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Welcome to BlogWave</h2>
+                <p>A modern blogging platform where ideas come to life.</p>
+                <a href="#featured" class="btn primary-btn">Explore Posts</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="featured-posts" id="featured">
+        <div class="container">
+            <h2 class="section-title">Featured Posts</h2>
+            <div class="post-grid">
+                <!-- Post items will be dynamically inserted here -->
+                <div class="post-card featured">
+                    <div class="post-image" data-src="https://picsum.photos/800/500?random=1">
+                        <span class="category">Technology</span>
+                    </div>
+                    <div class="post-content">
+                        <h3>The Future of Web Development</h3>
+                        <p class="post-meta">
+                            <span class="author">By John Smith</span>
+                            <span class="date">August 22, 2025</span>
+                        </p>
+                        <p class="excerpt">Exploring the latest trends and technologies shaping the future of web development...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="post-card">
+                    <div class="post-image" data-src="https://picsum.photos/800/500?random=2">
+                        <span class="category">Design</span>
+                    </div>
+                    <div class="post-content">
+                        <h3>UI/UX Design Principles for 2025</h3>
+                        <p class="post-meta">
+                            <span class="author">By Jane Doe</span>
+                            <span class="date">August 18, 2025</span>
+                        </p>
+                        <p class="excerpt">Key design principles that will dominate the digital landscape this year...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="post-card">
+                    <div class="post-image" data-src="https://picsum.photos/800/500?random=3">
+                        <span class="category">Programming</span>
+                    </div>
+                    <div class="post-content">
+                        <h3>Modern JavaScript Frameworks Comparison</h3>
+                        <p class="post-meta">
+                            <span class="author">By Alex Johnson</span>
+                            <span class="date">August 15, 2025</span>
+                        </p>
+                        <p class="excerpt">A comprehensive comparison between React, Vue, Angular, and other modern JS frameworks...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="recent-posts" id="recent-posts">
+        <div class="container">
+            <h2 class="section-title">Recent Posts</h2>
+            <div class="post-grid">
+                <!-- Recent posts will be dynamically inserted here -->
+            </div>
+            <div class="load-more-container">
+                <button class="btn secondary-btn" id="load-more">Load More</button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">Categories</h2>
+            <div class="category-container">
+                <a href="#" class="category-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Technology</h3>
+                    <span class="post-count">24 posts</span>
+                </a>
+                <a href="#" class="category-card">
+                    <i class="fas fa-palette"></i>
+                    <h3>Design</h3>
+                    <span class="post-count">18 posts</span>
+                </a>
+                <a href="#" class="category-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Programming</h3>
+                    <span class="post-count">32 posts</span>
+                </a>
+                <a href="#" class="category-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Business</h3>
+                    <span class="post-count">15 posts</span>
+                </a>
+                <a href="#" class="category-card">
+                    <i class="fas fa-camera"></i>
+                    <h3>Photography</h3>
+                    <span class="post-count">21 posts</span>
+                </a>
+                <a href="#" class="category-card">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Lifestyle</h3>
+                    <span class="post-count">27 posts</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get the latest posts delivered straight to your inbox.</p>
+                <form id="newsletter-form" class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn primary-btn">Subscribe</button>
+                    </div>
+                    <p class="form-message" id="form-message"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About BlogWave</h2>
+                    <p>BlogWave is a modern blogging platform dedicated to sharing knowledge, ideas, and stories from across the digital landscape. Our mission is to create a space where content creators can connect with readers and share valuable insights.</p>
+                    <p>Founded in 2025, we've grown into a community of passionate writers, developers, designers, and thinkers who are committed to creating high-quality content that informs, inspires, and entertains.</p>
+                    <a href="#" class="btn secondary-btn">Learn More</a>
+                </div>
+                <div class="about-image">
+                    <img data-src="https://picsum.photos/600/400?random=10" alt="About BlogWave">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email</label>
+                            <input type="email" id="contact-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Send Message</button>
+                        <p class="form-message" id="contact-form-message"></p>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>123 Blog Street, Web City, Internet 10101</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>contact@blogwave.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Blog<span>Wave</span></h2>
+                    <p>Your modern blogging platform</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#featured">Featured</a></li>
+                            <li><a href="#recent-posts">Recent Posts</a></li>
+                            <li><a href="#categories">Categories</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Categories</h3>
+                        <ul>
+                            <li><a href="#">Technology</a></li>
+                            <li><a href="#">Design</a></li>
+                            <li><a href="#">Programming</a></li>
+                            <li><a href="#">Business</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BlogWave. All rights reserved.</p>
+                <p>Designed and developed with <i class="fas fa-heart"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- JavaScript -->
+    <script src="app.js" defer></script>
+</body>
+</html>
