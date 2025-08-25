@@ -2,8 +2,6 @@
 
 A comprehensive, responsive, and optimized blog website built as a capstone project for the Apex Planet internship. This project demonstrates skills in HTML, CSS, JavaScript with a focus on performance optimization, responsive design, and cross-browser compatibility.
 
-![BlogWave Screenshot](https://picsum.photos/1200/630?random=99)
-
 ## Features
 
 ### Responsive Design
